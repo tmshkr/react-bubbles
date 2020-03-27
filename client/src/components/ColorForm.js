@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import axiosWithAuth from "../utils/axiosWithAuth";
 
 function ColorForm(props) {
-  const { handleSubmit, register, setValue } = useForm();
+  const { handleSubmit, register, errors, setValue } = useForm();
   const { add, edit, updateColors } = props;
   const [adding, setAdding] = add;
   const [editing, setEditing] = edit;
@@ -56,13 +56,25 @@ function ColorForm(props) {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <legend>{editing ? "edit" : "add"} color</legend>
-      <label>
+      <label style={errors.color && { color: "red" }}>
         color name:
-        <input name="color" type="text" ref={register()} />
+        <input
+          name="color"
+          type="text"
+          ref={register({
+            required: "Required"
+          })}
+        />
       </label>
-      <label>
+      <label style={errors.hex && { color: "red" }}>
         hex code:
-        <input name="hex" type="text" ref={register()} />
+        <input
+          name="hex"
+          type="text"
+          ref={register({
+            required: "Required"
+          })}
+        />
       </label>
       <div className="button-row">
         <button type="submit">save</button>
