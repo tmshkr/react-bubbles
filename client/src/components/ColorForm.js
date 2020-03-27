@@ -12,7 +12,7 @@ function ColorForm(props) {
     if (editing) {
       setValue([{ color: editing.color }, { hex: editing.code.hex }]);
     }
-  }, []);
+  }, [editing]);
 
   const cancel = () => {
     setAdding(false);
