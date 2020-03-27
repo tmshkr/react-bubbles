@@ -31,7 +31,7 @@ function LoginForm(props) {
           <input
             className="form-control"
             name="username"
-            type="username"
+            type="text"
             id="username"
             ref={register({
               required: "Required"
