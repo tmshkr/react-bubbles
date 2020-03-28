@@ -12,7 +12,7 @@ Web servers are publicly accessible from the Internet by their IP address, which
 
 ## Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
 
-Create => POST
-Read => GET
-Update => PUT
-Destroy => DELETE
+* Create => POST
+* Read => GET
+* Update => PUT
+* Destroy => DELETE
