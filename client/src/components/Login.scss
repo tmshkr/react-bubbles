@@ -1,0 +1,25 @@
+div.login {
+  width: 100%;
+}
+
+form.auth-form {
+  max-width: 300px;
+  text-align: left;
+  margin: auto;
+  margin-top: 5rem;
+  label {
+    padding: 0;
+  }
+  > * {
+    display: block;
+    width: 100%;
+  }
+  span.error {
+    display: block;
+    color: red;
+  }
+}
+[class^="spinner"] {
+  display: block;
+  margin: auto;
+}
